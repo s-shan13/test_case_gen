@@ -1,0 +1,13 @@
+.mainDiv{
+    margin:0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    align-items: center;
+}
+
+p:hover{
+    color: gray;
+    cursor: pointer;
+}
