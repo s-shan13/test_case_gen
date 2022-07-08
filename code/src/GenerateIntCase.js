@@ -1,8 +1,10 @@
 import React from 'react'
+import './IntGen.css'
 
 export default function GenerateIntCase() {
   return (
-    <div>
+    <div className='intCaseBody'>
+      
       
     </div>
   )

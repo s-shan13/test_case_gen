@@ -1,13 +1,19 @@
-.mainDiv{
+.header{
     margin:0;
     border: 1px solid black;
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
     align-items: center;
+    height: 5vh
 }
 
 p:hover{
     color: gray;
     cursor: pointer;
+}
+
+.mainPage{
+
+    height: 90vh
 }
