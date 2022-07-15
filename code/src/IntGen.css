@@ -2,5 +2,43 @@
     border: 1px solid black ;
     height: 100%;
     width: 100%;
+    display: flex;
+}
+
+.inputSection, .outputSection{
+    border: 1px solid black;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.inputSection{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.eachInput{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.eachInput input{
+    border-radius: 3px;
+}
+
+.eachInput:last-of-type{
+    flex-direction: row;
     
+}
+
+.resBody{
+    height: 95%;
+    width: 95%;
+    margin: auto;
+    background-color: whitesmoke;
 }
