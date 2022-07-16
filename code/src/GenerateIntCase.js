@@ -1,18 +1,14 @@
 import React from 'react'
 import './genLayout.css'
 
-// takes long time after input size > 10^5
+/** takes long time after input size > 10^5
+*   Refactor code move common states to header and pass them as props
+*/
 
 export default function GenerateIntCase() {
 
-  const [constraints, setConstraints] = React.useState(
-    {
-      size: 10, minVal: 0, maxVal: 10
-    }
-  )
-
+  const [constraints, setConstraints] = React.useState({size: 10, minVal: 0, maxVal: 10})
   const [commaSep, setCommaSep] = React.useState(false)
- 
   const [res, setRes] = React.useState([])
 
   function handleInput(event){ 
@@ -25,11 +21,9 @@ export default function GenerateIntCase() {
     setCommaSep(!commaSep)
   }
   
-  console.log(commaSep)
-
   function generate(){
     let tempArr = ['invalid constraints']
-    if(constraints.maxSize < constraints.minSize || constraints.maxVal < constraints.minVal){
+    if(constraints.maxSize < constraints.minSize){
       ;
     }else{
       
