@@ -4,6 +4,7 @@ import './genLayout.css'
 // Add uppercase/lowercase option
 // Could add extra characters like numbers and symbols
 // and allow users to specify character constraints
+// Add media queries for mobile
 
 
 export default function GenerateStrCase() {

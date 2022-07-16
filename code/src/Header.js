@@ -19,7 +19,7 @@ export default function Header() {
   }
 
   return (
-    <div  >
+    <div >
       <header className='header'>
         <p onClick={intClick}>Generate Integer Cases</p>
         <div>|</div>

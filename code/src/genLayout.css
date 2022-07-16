@@ -1,12 +1,10 @@
 .caseBody{
-    border: 1px solid black ;
     height: 100%;
     width: 100%;
     display: flex;
 }
 
 .inputSection, .outputSection{
-    border: 1px solid black;
     height: 100%;
     width: 50%;
     display: flex;
@@ -43,4 +41,16 @@
     background-color: whitesmoke;
     overflow: auto;
     padding: 1% 2% 1% 2%
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    width: 50%;
+    height: 5%
 }
