@@ -10,6 +10,8 @@ export default function GenerateIntCase() {
       size: 10, minVal: 0, maxVal: 10
     }
   )
+
+  const [commaSep, setCommaSep] = React.useState(false)
  
   const [res, setRes] = React.useState([])
 
@@ -18,11 +20,17 @@ export default function GenerateIntCase() {
       return {...prevCons, [event.target.name]: event.target.value}
     })
   }
+
+  function handleCheckbox(){
+    setCommaSep(!commaSep)
+  }
   
+  console.log(commaSep)
+
   function generate(){
     let tempArr = ['invalid constraints']
     if(constraints.maxSize < constraints.minSize || constraints.maxVal < constraints.minVal){
-      console.log(3)
+      ;
     }else{
       
       tempArr = []
@@ -36,7 +44,11 @@ export default function GenerateIntCase() {
       
     }
     
-    setRes( tempArr.map(val => <span> {val}</span>))
+    if(commaSep){
+      setRes( tempArr.map(val => <span> {val},</span>))
+    }else{
+      setRes( tempArr.map(val => <span> {val}</span>))
+    }
     
   }
 
@@ -58,7 +70,7 @@ export default function GenerateIntCase() {
         </div>
         <div className='eachInput'>
           <label hmtlFor='comma'>Comma separate values?</label>
-          <input type='checkbox' onChange={handleInput}/>
+          <input type='checkbox' checked={commaSep} onChange={handleCheckbox}/>
         </div>
         <button onClick={generate}>Generate</button>
       </div>
